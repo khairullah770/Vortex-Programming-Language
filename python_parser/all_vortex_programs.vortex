@@ -1,0 +1,150 @@
+
+## VortexLang Sample Programs
+
+# 1. Main Function
+func main() {
+    out("VortexLang Start");
+}
+
+# 2. Variable Declaration
+func declareVars() {
+    num age = 25;
+    const str name = "Ali";
+}
+
+# 3. Input
+func takeInput() {
+    str userName;
+    in(userName);
+}
+
+# 4. Output
+func greetUser() {
+    str name = "Ali";
+    out("Hello, " + name);
+}
+
+# 5. Assignment
+func updateData() {
+    num x = 5;
+    x = 10;
+}
+
+# 6. Function Call
+func mainCall() {
+    greet("Ali");
+}
+func greet(str name) {
+    out("Hi " + name);
+}
+
+# 7. Function with Return
+func add(num a, num b) -> num {
+    give a + b;
+}
+
+# 8. Function with Default Parameter
+func greet(str name = "Guest") {
+    out("Hello, " + name);
+}
+
+# 9. Return Statement
+func double(num x) -> num {
+    give x * 2;
+}
+
+# 10. Conditional Statement
+func checkValue(num x) {
+    when (x > 5) {
+        out("High");
+    }
+    whenelse (x > 2) {
+        out("Medium");
+    }
+    else {
+        out("Low");
+    }
+}
+
+# 11. repeat Loop
+func countRepeat() {
+    repeat (num i = 0; i < 5; i += 1) {
+        out(i);
+    }
+}
+
+# 12. cycle Loop
+func simpleCycle() {
+    num x = 0;
+    cycle (x < 3) {
+        x += 1;
+    }
+}
+
+# 13. perform-cycle Loop
+func decrementCycle() {
+    num x = 3;
+    perform {
+        x -= 1;
+    } cycle (x > 0);
+}
+
+# 14. break and skip
+func controlFlow() {
+    repeat (num i = 0; i < 5; i += 1) {
+        when (i == 3) {
+            break;
+        }
+        when (i == 1) {
+            skip;
+        }
+        out(i);
+    }
+}
+
+# 15. select / case / default
+func handleOption(num option) {
+    select (option) {
+        case 1:
+            out("One");
+            break;
+        case 2:
+            out("Two");
+            break;
+        default:
+            out("Invalid");
+    }
+}
+
+# 16. try / catch
+func errorHandling() {
+    try {
+        num x = 5 / 0;
+    } catch (err) {
+        out("Error!");
+    }
+}
+
+# 17. List Declaration
+func createList() {
+    list nums = [1, 2, 3];
+}
+
+# 18. List of Objects
+func peopleList() {
+    list people = [
+        {str name -> "Ali", num age -> 22},
+        {str name -> "Sara", num age -> 23}
+    ];
+}
+
+# 19. Nested perform-cycle and when
+func complexLoop() {
+    num x = 5;
+    perform {
+        x -= 1;
+        when (x == 2) {
+            out("Reached 2");
+        }
+    } cycle (x > 0);
+}

@@ -1,0 +1,14 @@
+func main(){
+  perform {
+        x -= 1;
+        cycle(x>0){
+         when(x<0){
+          
+            list x = [1, 2, 3];
+          }
+          else{
+            
+          x=1;}
+        }
+    } cycle (x > 0);
+}
